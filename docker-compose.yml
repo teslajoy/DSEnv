@@ -1,0 +1,17 @@
+version: '3'
+services:
+
+  <workflow-service-A>:
+    build:
+      context: .
+    volumes:
+      - ./local/data/input:/app/data/input
+      - ./local/data/output:/app/data/output
+
+  <workflow-service-B>:
+    build:
+      context: .
+    volumes:
+      - ./local/data/input:/app/data/input
+      - ./local/data/output:/app/data/output
+   entrypoint: ["/bin/bash"] # overwrites Docker file entrypoint
