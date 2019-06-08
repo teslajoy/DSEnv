@@ -14,4 +14,4 @@ services:
     volumes:
       - ./local/data/input:/app/data/input
       - ./local/data/output:/app/data/output
-   entrypoint: ["/bin/bash"] # overwrites Docker file entrypoint
+    entrypoint: ["/bin/bash"] # overwrites Docker file entrypoint
