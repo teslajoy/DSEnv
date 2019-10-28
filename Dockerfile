@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends build-essential
     pandoc \
     libssl-dev \
     libcurl4-openssl-dev \
+    libxml2-dev \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install --upgrade pip
@@ -24,7 +25,7 @@ RUN bash -c 'mkdir -p /app/data/{input,output}'
 
 WORKDIR /app
 
-RUN python3 setup.py install
+# RUN python3 setup.py install
 
-ENTRYPOINT ["<workflow-service-A>"]
-CMD ["<some>", "<command>", "<here>"]
+ENTRYPOINT ["/bin/bash"]
+# CMD ["<some>", "<command>", "<here>"]

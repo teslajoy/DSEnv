@@ -5,13 +5,7 @@ services:
     build:
       context: .
     volumes:
-      - ./local/data/input:/app/data/input
-      - ./local/data/output:/app/data/output
+      - /opt/data:/app/data/input
+      - /opt/data/docker-output:/app/data/output
+    entrypoint: ["/bin/bash"]
 
-  <workflow-service-B>:
-    build:
-      context: .
-    volumes:
-      - ./local/data/input:/app/data/input
-      - ./local/data/output:/app/data/output
-    entrypoint: ["/bin/bash"] # overwrites Docker file entrypoint
