@@ -30,7 +30,7 @@ RUN Rscript /opt/installPackages.R
 RUN rm /opt/installPackages.R
 RUN bash -c 'mkdir -p /app/data/{input,output}'
 
-# COPY <your application path> /app/
+# COPY <your-application-path> /app/
 WORKDIR /app
 
 # RUN python setup.py install
