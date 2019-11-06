@@ -33,6 +33,6 @@ RUN bash -c 'mkdir -p /app/data/{input,output}'
 # COPY <your application path> /app/
 WORKDIR /app
 
-# RUN python3 setup.py install
+# RUN python setup.py install
 ENTRYPOINT ["/bin/bash"]
 # CMD ["<some>", "<command>", "<here>"]
