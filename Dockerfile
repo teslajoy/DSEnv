@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends build-essential
     libssl-dev \
     libcurl4-openssl-dev \
     libxml2-dev \
+    libomp-dev \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install --upgrade pip
