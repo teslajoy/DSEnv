@@ -1,4 +1,6 @@
-Not the smallest Docker image, but it's one that would help you knitt an rmarkdown in a bash shell or fire up ipython for your workflow tuning with the latest python3 and R versions. Data Science (DS) tools/libs enviornment to work with. 
+#### Data Science (DS) enviornment template 
+
+Docker image that would help you knitt an rmarkdown in a bash shell or fire up ipython for your workflow tuning with the latest python3 and R versions.
  
 > setup 
 
