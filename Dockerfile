@@ -3,7 +3,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && apt-get install -y gnupg2 software-properties-common && \ 
     apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 && \
-    add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'
+    add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/'
 
 RUN apt-get update && apt-get install -y --no-install-recommends build-essential \
     wget \
@@ -19,10 +19,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends build-essential
     libcurl4-openssl-dev \
     libxml2-dev \
     libomp-dev \
+    libnetcdf-dev \
+    libudunits2-dev \
+    libgdal-dev \
+    libproj-dev \
+    libncurses5 \
+    libncurses5-dev \
+    libbz2-dev \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install --upgrade pip
-RUN pip install pandas numpy ipython argparse reactome2py --upgrade 
+RUN pip install pandas numpy ipython argparse reactome2py scikit-learn --upgrade 
 RUN ln -s /usr/bin/python3 /usr/bin/python && \ 
     ln -s /usr/bin/pip3 /usr/bin/pip
 
