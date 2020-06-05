@@ -29,7 +29,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends build-essential
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install --upgrade pip
-RUN pip install pandas numpy ipython argparse reactome2py scikit-learn --upgrade 
+RUN pip install pandas numpy ipython argparse reactome2py --upgrade 
+RUN pip install scikit-learn==0.22
 RUN ln -s /usr/bin/python3 /usr/bin/python && \ 
     ln -s /usr/bin/pip3 /usr/bin/pip
 
