@@ -30,8 +30,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends build-essential
 
 RUN pip3 install --upgrade pip
 RUN pip install pandas numpy ipython argparse reactome2py scikit-learn --upgrade 
-RUN ln -s /usr/bin/python3 /usr/bin/python && \ 
-    ln -s /usr/bin/pip3 /usr/bin/pip
 
 COPY rdependency/installPackages.R /opt/installPackages.R
 RUN Rscript /opt/installPackages.R
