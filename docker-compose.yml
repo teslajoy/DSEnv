@@ -2,11 +2,9 @@ version: '3'
 services:
 
   <workflow-service-A>:
-    platform: linux/amd64
     build:
       context: .
     volumes:
       - /opt/data/input/:/app/data/input
       - /opt/data/output/:/app/data/output
     entrypoint: ["/bin/bash"]
-
