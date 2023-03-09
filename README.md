@@ -11,16 +11,7 @@ Docker image that would help you knitt an rmarkdown in a bash shell or fire up i
 - change the commands and entrypoints as you need in Dockerfile 
 
 > execute
-
-1. `docker-compose build <my service name>` (may need sudo to fireup docker daemon)
+0. fireup docker daemon 
+1. `docker-compose build <my service name>` 
 2. `docker-compose run --rm <my service name>`
 3.  :tada: may the force be with you! 
-
-----
-
-*Note:* 
-This image is for macs with apple M1 chip. 
-- https://cloud.r-project.org/bin/linux/ubuntu/focal-cran40/
-- https://docs.docker.com/desktop/mac/apple-silicon/
-
-For Intel chip systems, you can remove `platform: linux/amd64` in `docker-compose.yml` file. 
